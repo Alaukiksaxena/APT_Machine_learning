@@ -1,0 +1,30 @@
+{
+   "input_path": "data",
+   "output_path": "output",
+   "n_big_slices": 10,
+    "voxel_size": 2,
+    "bics_clusters": 10,
+    "n_phases": 3,
+   "submission_path": "spaceship-titanic/submission.csv",
+   "target":"Transported",
+   "fill_numerical_with": {},
+   "fill_categorical_with":{},
+   "parameters": {
+      "drop_features": [
+         "PassengerId",
+         "Name",
+         "Cabin"
+      ],
+      "normalization" : {"method":"mean"},
+      "preprocess_method": 1,
+      "fill_numerical_columns": "mean",
+      "fill_categorical_columns": "mode",
+      "ml_models": {
+                          
+         "GaussianMixture": {"name": "GaussianMixture",
+                           "params": {"n_components":3,"max_iter":100000,
+                                    "verbose":0}}
+                 
+         }
+      }
+   }
